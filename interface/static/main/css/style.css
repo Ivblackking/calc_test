@@ -1,0 +1,180 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f7fffb;
+}
+
+body * {
+    font-family: sans-serif;
+}
+
+.row-top {
+    background-image: url("https://cost.ua/content/themes/cost/pension_calc_new//img/section-pension-head-fon.jpg");
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.row-bottom {
+    padding-top: 48px;
+}
+
+.col-left,
+.col-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section__number{
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4e4d4d;
+    color: #fff;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.input-section__content{
+    width: calc(100% - 80px);
+    padding: 33px 25px 17px 25px;
+    background-color: #dfe4d9;
+}
+
+.input-slider__text{
+    padding-right: 15px;
+}
+
+.title-input {
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 21px;
+}
+
+.units {
+    font-size: 21px;
+    line-height: 28px;
+    color: #000;
+}
+
+.input-slider .number-input {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.number-input--controls input {
+    padding: 10px 10px 10px 39px;
+    border-radius: 45px;
+    outline: none;
+    width: 210px;
+    height: 63px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    color: #000;
+    font-weight: 700;
+    font-size: 30px;
+    box-sizing: border-box;
+}
+
+.radio__radio .pretty {
+    display: flex;
+    align-items: center;
+}
+
+.radio__radio .pretty input{
+    margin-right: 10px;
+}
+
+.card-result {
+    position: relative;
+    padding: 84px 69px;
+    background-color: #74815f;
+    color: #fff;
+    width: 452px;
+    height: 341px;
+}
+
+.card-result .result-icon {
+    position: absolute;
+    top: 49px;
+    right: 41px;
+    width: 89px;
+    height: auto;
+}
+
+.result-income {
+    display: block;
+    margin-top: 30px;
+    font-size: 58px;
+    line-height: 68px;
+}
+
+.result-income-desc {
+    display: block;
+    width: 200px;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.result-income-value {
+    font-size: 58px;
+    font-weight: 700;
+}
+
+.result-income-currency {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+@media(max-width: 992px){
+    .col-left {
+        height: 55vh;
+    }
+
+    .card-result {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 30px 69px;
+    }
+
+    .card-result .result-icon {
+        display: none;
+    }
+
+    .result-income-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .result-income {
+        margin-top: 0;
+    }
+}
+
+@media(max-width: 576px){
+    .col-left {
+        height: 45vh;
+    }
+
+    .input-slider {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-slider__text > * {
+        text-align: center;
+    }
+
+    .units {
+        margin-bottom: 10px;
+    }
+}
