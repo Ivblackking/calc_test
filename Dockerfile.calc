@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY requirements.txt /app
+RUN pip install -r requirements.txt --no-cache-dir
+
+# Copy project files
+COPY calc /app/calc
+
+# Change working dir
+WORKDIR /app/calc
+
+# Command to run the application
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

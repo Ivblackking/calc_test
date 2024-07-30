@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  interface:
+    container_name: "interface"
+    build:
+      context: .
+      dockerfile: Dockerfile.interface
+    volumes:
+      - ./interface:/app/interface
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+  
+  calc:
+    container_name: "calc"
+    build:
+      context: .
+      dockerfile: Dockerfile.calc
+    volumes:
+      - ./calc:/app/calc
+    ports:
+      - "8001:8000"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    container_name: "postgres"
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: ${CALC_DB_NAME}
+      POSTGRES_USER: ${CALC_DB_USER}
+      POSTGRES_PASSWORD: ${CALC_DB_PASSWORD}
+
+  pgadmin:
+    container_name: "pgadmin"
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "${PGADMIN_PORT}:80"
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
