@@ -131,6 +131,10 @@ body * {
     line-height: 42px;
 }
 
+input[type='radio'] {
+    accent-color: #74815f;
+}
+
 @media(max-width: 992px){
     .col-left {
         height: 55vh;
