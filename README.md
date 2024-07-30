@@ -45,3 +45,7 @@ This sample application is a calculator for calculating your future pension in U
 ## Usage
 To calculate future pension just enter/change some parameters in the form in the left column of the page. The result will appear in the right box.
 Also try to change width of the browser window and see how it works for small screens like smartphone or tablet.
+
+<img alt="Computer screen" src="https://www.dropbox.com/scl/fi/zgiqbs72nihtcs67gs5vj/screen1.png?rlkey=puqih6hlqcu0boz9hi2citev9&st=clcjha7s&raw=1" width="75%">
+
+<img alt="Small screen" src="https://www.dropbox.com/scl/fi/lxsheyo8hgnahzujg0rp6/screen2.png?rlkey=u1yuetjoxh5ngs759k7hp8efb&st=1njwmjrg&raw=1" width="35%">
